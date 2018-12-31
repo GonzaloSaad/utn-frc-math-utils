@@ -1,6 +1,7 @@
 package ar.edu.utn.frc.mathutils.functions.operations;
 
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
+import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
 
 public class ProductFunction implements MathFunction {
 
@@ -19,7 +20,7 @@ public class ProductFunction implements MathFunction {
 
     @Override
     public String expression() {
-        return String.format("%s*%s", firstProduct, secondsProduct);
+        return FunctionsUtils.formatProduct(firstProduct, secondsProduct);
     }
 
     @Override

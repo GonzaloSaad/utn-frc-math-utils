@@ -1,6 +1,6 @@
 package ar.edu.utn.frc.mathutils.functions.elemental;
 
-import ar.edu.utn.frc.mathutils.functions.FunctionsConstants;
+import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 
 public class NegativeFunction implements MathFunction {
@@ -15,7 +15,7 @@ public class NegativeFunction implements MathFunction {
 
     @Override
     public String expression() {
-        return FunctionsConstants.formatFunction(NEGATIVE_EXPRESSION, argument);
+        return FunctionsUtils.formatFunction(NEGATIVE_EXPRESSION, argument);
     }
 
     @Override
