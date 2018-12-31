@@ -4,6 +4,8 @@ import ar.edu.utn.frc.mathutils.functions.util.FunctionsConstants;
 import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 
+import java.util.Objects;
+
 public class ConstantFunction implements MathFunction{
 
 
@@ -26,5 +28,18 @@ public class ConstantFunction implements MathFunction{
     @Override
     public Double apply(Double aDouble) {
         return constant;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ConstantFunction that = (ConstantFunction) o;
+        return Objects.equals(constant, that.constant);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(constant);
     }
 }

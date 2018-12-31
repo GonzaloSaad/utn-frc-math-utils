@@ -5,11 +5,12 @@ import ar.edu.utn.frc.mathutils.functions.util.FunctionsConstants;
 import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 
+import java.util.Objects;
+
 public class DivisionFunction implements MathFunction {
 
     private final MathFunction divisor;
     private final MathFunction dividend;
-    private MathFunction dividendOfDerivative;
 
     public DivisionFunction(MathFunction divisor, MathFunction dividend) {
         this.divisor = divisor;
@@ -38,5 +39,20 @@ public class DivisionFunction implements MathFunction {
 
     private MathFunction getDividendOfDerivative() {
         return new PowerFunction(dividend, FunctionsConstants.TWO);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DivisionFunction that = (DivisionFunction) o;
+        return Objects.equals(divisor, that.divisor) &&
+                Objects.equals(dividend, that.dividend);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(divisor, dividend);
     }
 }

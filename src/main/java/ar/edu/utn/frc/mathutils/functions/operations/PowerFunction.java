@@ -4,6 +4,8 @@ import ar.edu.utn.frc.mathutils.functions.MathFunction;
 import ar.edu.utn.frc.mathutils.functions.elemental.ConstantFunction;
 import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
 
+import java.util.Objects;
+
 public class PowerFunction implements MathFunction {
 
     private final MathFunction base;
@@ -29,5 +31,19 @@ public class PowerFunction implements MathFunction {
     @Override
     public Double apply(Double aDouble) {
         return Math.pow(base.apply(aDouble), exponent);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PowerFunction that = (PowerFunction) o;
+        return Objects.equals(base, that.base) &&
+                Objects.equals(exponent, that.exponent);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(base, exponent);
     }
 }

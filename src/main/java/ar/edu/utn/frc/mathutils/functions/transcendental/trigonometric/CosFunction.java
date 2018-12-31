@@ -4,6 +4,8 @@ import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 import ar.edu.utn.frc.mathutils.functions.operations.ProductFunction;
 
+import java.util.Objects;
+
 public class CosFunction implements MathFunction {
 
     public static final String COS_EXPRESSION = "COS";
@@ -29,4 +31,17 @@ public class CosFunction implements MathFunction {
         return Math.cos(argument.apply(aDouble));
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CosFunction that = (CosFunction) o;
+        return Objects.equals(argument, that.argument);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(argument);
+    }
 }

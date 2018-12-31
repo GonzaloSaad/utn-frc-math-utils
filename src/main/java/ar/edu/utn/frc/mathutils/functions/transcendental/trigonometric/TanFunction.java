@@ -9,6 +9,8 @@ import ar.edu.utn.frc.mathutils.functions.MathFunction;
 import ar.edu.utn.frc.mathutils.functions.elemental.NegativeFunction;
 import ar.edu.utn.frc.mathutils.functions.operations.ProductFunction;
 
+import java.util.Objects;
+
 public class TanFunction implements MathFunction {
 
     public static final String TAN_EXPRESSION = "TAN";
@@ -32,5 +34,19 @@ public class TanFunction implements MathFunction {
     @Override
     public Double apply(Double aDouble) {
         return Math.tan(argument.apply(aDouble));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TanFunction that = (TanFunction) o;
+        return Objects.equals(argument, that.argument);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(argument);
     }
 }
