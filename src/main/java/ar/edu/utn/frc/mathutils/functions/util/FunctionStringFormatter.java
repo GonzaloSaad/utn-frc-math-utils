@@ -2,7 +2,7 @@ package ar.edu.utn.frc.mathutils.functions.util;
 
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 
-public abstract class FunctionsUtils {
+public abstract class FunctionStringFormatter {
 
     private static final String UNARY_FUNCTION_FORMAT = "%s(%s)";
     private static final String DIVISION_FUNCTION_FORMAT = "(%s/%s)";

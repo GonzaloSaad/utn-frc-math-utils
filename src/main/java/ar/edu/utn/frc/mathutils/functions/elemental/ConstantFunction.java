@@ -1,7 +1,6 @@
 package ar.edu.utn.frc.mathutils.functions.elemental;
 
 import ar.edu.utn.frc.mathutils.functions.util.FunctionsConstants;
-import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 
 import java.util.Objects;

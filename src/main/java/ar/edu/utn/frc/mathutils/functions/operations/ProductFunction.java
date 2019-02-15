@@ -1,7 +1,7 @@
 package ar.edu.utn.frc.mathutils.functions.operations;
 
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
-import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
+import ar.edu.utn.frc.mathutils.functions.util.FunctionStringFormatter;
 
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public class ProductFunction implements MathFunction {
 
     @Override
     public String expression() {
-        return FunctionsUtils.formatProduct(firstProduct, secondsProduct);
+        return FunctionStringFormatter.formatProduct(firstProduct, secondsProduct);
     }
 
     @Override

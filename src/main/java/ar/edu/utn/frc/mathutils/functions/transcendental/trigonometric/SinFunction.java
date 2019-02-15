@@ -1,6 +1,6 @@
 package ar.edu.utn.frc.mathutils.functions.transcendental.trigonometric;
 
-import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
+import ar.edu.utn.frc.mathutils.functions.util.FunctionStringFormatter;
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 import ar.edu.utn.frc.mathutils.functions.elemental.NegativeFunction;
 import ar.edu.utn.frc.mathutils.functions.operations.ProductFunction;
@@ -18,7 +18,7 @@ public class SinFunction implements MathFunction {
 
     @Override
     public String expression() {
-        return FunctionsUtils.formatFunction(SIN_EXPRESSION, argument);
+        return FunctionStringFormatter.formatFunction(SIN_EXPRESSION, argument);
     }
 
     @Override

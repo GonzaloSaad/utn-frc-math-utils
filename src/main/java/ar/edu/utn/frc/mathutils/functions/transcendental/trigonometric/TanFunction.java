@@ -1,13 +1,10 @@
 package ar.edu.utn.frc.mathutils.functions.transcendental.trigonometric;
 
-import ar.edu.utn.frc.mathutils.functions.elemental.ConstantFunction;
 import ar.edu.utn.frc.mathutils.functions.operations.DivisionFunction;
 import ar.edu.utn.frc.mathutils.functions.operations.PowerFunction;
 import ar.edu.utn.frc.mathutils.functions.util.FunctionsConstants;
-import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
+import ar.edu.utn.frc.mathutils.functions.util.FunctionStringFormatter;
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
-import ar.edu.utn.frc.mathutils.functions.elemental.NegativeFunction;
-import ar.edu.utn.frc.mathutils.functions.operations.ProductFunction;
 
 import java.util.Objects;
 
@@ -22,7 +19,7 @@ public class TanFunction implements MathFunction {
 
     @Override
     public String expression() {
-        return FunctionsUtils.formatFunction(TAN_EXPRESSION, argument);
+        return FunctionStringFormatter.formatFunction(TAN_EXPRESSION, argument);
     }
 
     @Override

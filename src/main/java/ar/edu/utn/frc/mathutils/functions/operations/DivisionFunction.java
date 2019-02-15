@@ -2,7 +2,7 @@ package ar.edu.utn.frc.mathutils.functions.operations;
 
 import ar.edu.utn.frc.mathutils.functions.elemental.NegativeFunction;
 import ar.edu.utn.frc.mathutils.functions.util.FunctionsConstants;
-import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
+import ar.edu.utn.frc.mathutils.functions.util.FunctionStringFormatter;
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 
 import java.util.Objects;
@@ -19,7 +19,7 @@ public class DivisionFunction implements MathFunction {
 
     @Override
     public String expression() {
-        return FunctionsUtils.formatDivision(divisor, dividend);
+        return FunctionStringFormatter.formatDivision(divisor, dividend);
     }
 
     @Override

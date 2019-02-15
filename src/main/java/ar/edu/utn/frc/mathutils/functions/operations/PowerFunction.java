@@ -2,7 +2,7 @@ package ar.edu.utn.frc.mathutils.functions.operations;
 
 import ar.edu.utn.frc.mathutils.functions.MathFunction;
 import ar.edu.utn.frc.mathutils.functions.elemental.ConstantFunction;
-import ar.edu.utn.frc.mathutils.functions.util.FunctionsUtils;
+import ar.edu.utn.frc.mathutils.functions.util.FunctionStringFormatter;
 
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public class PowerFunction implements MathFunction {
 
     @Override
     public String expression() {
-        return FunctionsUtils.formatPower(base, new ConstantFunction(exponent));
+        return FunctionStringFormatter.formatPower(base, new ConstantFunction(exponent));
     }
 
     @Override
